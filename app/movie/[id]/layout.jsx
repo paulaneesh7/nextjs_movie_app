@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRightSquare } from "lucide-react";
 import { ReactNode } from "react";
 
 async function getData(id) {
@@ -33,31 +34,38 @@ export default async function MovieId({ params, children }) {
         />
       </div>
 
-      <h1 className="text-2xl md:text-4xl font-bold text-center pt-5">
-        {data.title}
+      <h1 className="text-2xl md:text-5xl font-bold text-center pt-5">
+        <span className="bg-gradient-to-r from-green-500 to-blue-500 text-transparent bg-clip-text">
+          {data.title}
+        </span>
       </h1>
 
-      <div className="flex flex-col lg:flex-row gap-10 mt-10">
-        <div className="w-full lg:w-1/2 font-medium ">
+      <div className="flex flex-col lg:flex-row gap-10 mt-10 lg:items-center">
+        <div className="w-full lg:w-1/2 font-medium md:text-lg">
           <h1>
-            <span className="underline">Homepage:</span>{" "}
-            <Link href={data.homepage} target="_blank">
-              Link
-            </Link>
-          </h1>
-
-          <h1>
-            <span className="underline">Original Lanugage:</span>{" "}
+            <span className="text-teal-500">Original Lanugage:</span>{" "}
             {data.original_language}
           </h1>
 
           <p>
-            <span className="underline">Overview:</span> {data.overview}
+            <span className="text-teal-500">Overview:</span> {data.overview}
           </p>
 
           <p>
-            <span className="underline">Release Date:</span> {data.release_date}
+            <span className="text-teal-500">Release Date:</span>{" "}
+            {data.release_date}
           </p>
+
+          <h1 className="mt-2">
+            <span className="text-teal-500">Link: </span>{" "}
+            <Link
+              href={data.homepage}
+              target="_blank"
+              className="hover:underline duration-200"
+            >
+              Visit Homepage 👉
+            </Link>
+          </h1>
         </div>
         <div className="w-full lg:w-1/2 font-medium">{children}</div>
       </div>

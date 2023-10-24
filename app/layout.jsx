@@ -15,9 +15,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className={inter.className}>
-        <nav className="px-10 pt-5">
-          <Link href="/" className="text-2xl font-semibold">
+      <body className={`${inter.className} bg-slate-950 text-white`}>
+        <nav className="px-10 pt-5 text-center">
+          <Link href="/" className="text-3xl md:text-5xl font-semibold">
             Movie <span className="text-teal-400">DB</span>
           </Link>
         </nav>
