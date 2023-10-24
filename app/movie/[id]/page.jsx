@@ -43,7 +43,7 @@ export default async function Page({ params }) {
         <form action={postData}>
           <textarea
             name="comment"
-            className="w-full rounded-lg p-2 outline-teal-400"
+            className="w-full rounded-lg p-2 outline-teal-400 text-black"
             placeholder="add your comment..."
           ></textarea>
           <input type="hidden" name="id" value={params.id} />
