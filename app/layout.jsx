@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           </Link>
         </nav>
         {children}
-        <div className="flex justify-center items-center gap-1 text-xl mt-5">
+        <div className="flex justify-center items-center gap-1 text-sm md:text-lg lg:text-xl mt-5">
           <p>Made with Next.js </p>
           <a href="https://vercel.com/" target="_blank">
             <div className="flex justify-center items-center cursor-pointer">
