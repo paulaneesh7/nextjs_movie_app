@@ -17,7 +17,22 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} bg-slate-950 text-white`}>
-        <nav className="px-10 pt-5 text-center">
+        <nav className="px-10 pt-5 flex justify-center gap-2 cursor-pointer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#009688"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-clapperboard w-8 h-8 md:w-12 md:h-12"
+          >
+            <path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z" />
+            <path d="m6.2 5.3 3.1 3.9" />
+            <path d="m12.4 3.4 3.1 4" />
+            <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+          </svg>
           <Link href="/" className="text-3xl md:text-5xl font-semibold">
             Movie <span className="text-teal-400">DB</span>
           </Link>

@@ -9,7 +9,7 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <div>
+    <div className="text-xl text-center flex flex-col justify-center items-center h-screen">
       <h2>Something went wrong!</h2>
       <button
         onClick={
@@ -17,7 +17,7 @@ export default function Error({ error, reset }) {
           () => reset()
         }
       >
-        Try again
+        Try again 😥
       </button>
     </div>
   );

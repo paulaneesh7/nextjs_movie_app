@@ -44,7 +44,7 @@ export default async function MovieId({ params, children }) {
         <div className="w-full lg:w-1/2 font-medium md:text-lg">
           <h1>
             <span className="text-teal-500">Original Lanugage:</span>{" "}
-            {data.original_language}
+            {data.original_language.toUpperCase()}
           </h1>
 
           <p>
