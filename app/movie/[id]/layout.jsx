@@ -63,9 +63,26 @@ export default async function MovieId({ params, children }) {
               target="_blank"
               className="hover:underline duration-200"
             >
-              Visit Homepage 👉
+              Visit Homepage
             </Link>
+            👉
           </h1>
+
+          <p className="mt-3">
+            {" "}
+            <span className="text-teal-500">Rating:</span>{" "}
+            <span
+              className={`border-4 p-1 rounded-full ${
+                data.vote_average.toFixed(1) < 5
+                  ? "border-red-500"
+                  : data.vote_average.toFixed(1) < 7
+                  ? "border-orange-500"
+                  : "border-green-500"
+              }`}
+            >
+              {data.vote_average.toFixed(1)}
+            </span>{" "}
+          </p>
         </div>
         <div className="w-full lg:w-1/2 font-medium">{children}</div>
       </div>
