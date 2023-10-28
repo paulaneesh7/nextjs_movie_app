@@ -23,6 +23,16 @@ async function getData(id) {
 export default async function MovieId({ params, children }) {
   const data = await getData(params.id);
 
+  const convertMinutesToHoursAndMinutes = (minutes) => {
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+    const hoursString = hours > 0 ? `${hours}h ` : "";
+    const minutesString = `${remainingMinutes}m`;
+    return `${hoursString}${minutesString}`;
+  };
+
+  const runtime = convertMinutesToHoursAndMinutes(data.runtime);
+
   return (
     <div className="min-h-screen p-10">
       <div className="h-40 md:h-96 lg:h-[100vh] relative">
@@ -54,6 +64,10 @@ export default async function MovieId({ params, children }) {
           <p>
             <span className="text-teal-500">Release Date:</span>{" "}
             {data.release_date}
+          </p>
+
+          <p>
+            <span className="text-teal-500">Runtime:</span> {runtime}
           </p>
 
           <h1 className="mt-2">
