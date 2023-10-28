@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
             Movie <span className="text-teal-400">DB</span>
           </Link>
         </nav>
+        <NextTopLoader color="red" height={4}/>
         {children}
         <div className="flex justify-center items-center gap-1 text-sm md:text-lg lg:text-xl mt-5">
           <p>Made with Next.js </p>
