@@ -7,8 +7,9 @@ export default function SubmitButton() {
   return (
     <button
       type="submit"
-      disabled={pending}
-      className="bg-teal-500 px-4 py-2 rounded-lg text-white"
+      // disabled={pending}
+      disabled
+      className="px-4 py-2 text-white bg-teal-500 rounded-lg cursor-not-allowed"
     >
       {pending ? <>loading...</> : <>Add Comment...</>}
     </button>
